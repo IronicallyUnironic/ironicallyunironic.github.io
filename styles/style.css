@@ -93,3 +93,11 @@ body {
     margin-top: 20px;
     height: 100px;
 }
+
+.main-content ul {
+    list-style-type: disc; /* Ensures bullets appear */
+    text-align: left; /* Aligns text properly */
+    display: inline-block; /* Keeps it centered but aligned */
+    margin: 0 auto; /* Centers the list */
+    padding-left: 20px; /* Adds some padding for spacing */
+}
