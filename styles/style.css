@@ -94,6 +94,17 @@ body {
     height: 100px;
 }
 
+a {
+    color: white;
+    font-weight: bold;
+
+}
+
+a:hover {
+    color: #f39c12;
+    font-weight: bold;
+}
+
 .main-content ul {
     list-style-type: disc; /* Ensures bullets appear */
     text-align: left; /* Aligns text properly */
