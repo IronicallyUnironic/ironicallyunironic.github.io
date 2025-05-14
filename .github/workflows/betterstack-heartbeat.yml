@@ -1,0 +1,22 @@
+name: Notify Better Stack (Pages Deploy)
+
+on:
+  workflow_run:
+    workflows: ["Deploy static content to Pages"]
+    types:
+      - completed
+
+jobs:
+  notify:
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event.workflow_run.conclusion == 'failure' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Better Stack on success
+        if: ${{ github.event.workflow_run.conclusion == 'success' }}
+        run: |
+          curl -fsS https://uptime.betterstack.com/api/v1/heartbeat/yGUyJ1MebGDvCsorEZTgjQBq > /dev/null || echo "Failed to notify Better Stack"
+
+      - name: Notify Better Stack on failure
+        if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+        run: |
+          curl -fsS https://uptime.betterstack.com/api/v1/heartbeat/yGUyJ1MebGDvCsorEZTgjQBq/fail > /dev/null || echo "Failed to notify Better Stack"
