@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - tougHERsports</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <style>
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+        .contact-form label {
+            font-weight: bold;
+            margin-bottom: 0.25rem;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .contact-form input:focus, .contact-form textarea:focus {
+            outline: none;
+            border-color: #333;
+            box-shadow: 0 0 5px rgba(51, 51, 51, 0.2);
+        }
+        .contact-form button {
+            background-color: #333;
+            color: #fff;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .contact-form button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="https://www.toughersports.org/assets/logo.png" alt="tougHERsports Logo - Empowering Women in Sports" title="tougHERsports - Empowering Women in Sports">
+        <nav class="nav">
+            <a href="/" title="Home - tougHERsports">Home</a>
+            <a href="/pages/about/" title="About tougHERsports">About</a>
+            <a href="/pages/events/" title="Panel Q/A - Learn More About Mental Health in Sports">Events</a>
+            <a href="/pages/resources/" title="Resources for Female Athletes">Resources</a>
+            <a href="/pages/contact/" title="Contact tougHERsports" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <h1>Contact Us</h1>
+        <p>Have questions, suggestions, or want to get involved? Reach out to us!</p>
+        <form class="contact-form" action="https://formspree.io/f/xwpoybjo" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <div class="contact-info">
+            <p>Email: <a href="mailto:toughersports@gmail.com" title="Contact tougHERsports via email">toughersports@gmail.com</a></p>
+            <p>Facebook: <a href="https://www.facebook.com/people/Toughersports/61560253873084/" target="_blank" title="Follow tougHERsports on Facebook">@tougHERsports</a></p>
+        </div>
+        <img src="https://www.toughersports.org/assets/transparentlogo.png" alt="tougHERsports Footer Image - Empowering Women in Sports" title="tougHERsports Logo Footer">
+    </footer>
+</body>
+</html>
